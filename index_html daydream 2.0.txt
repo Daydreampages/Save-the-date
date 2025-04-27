@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daydream Pages – Save The Date</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+  <!-- Preconnect (makes Google Fonts load faster) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A dreamy Save The Date website template for weddings and events. Elegant, mobile-friendly, and customizable." />
+  <meta name="author" content="Daydream Pages" />
+</head>
+
+<body>
+<div id="background"></div>
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+
+    <div class="container">
+        <h1>Save The Date</h1>
+        <p class="names">[Your Names]</p>
+        <p class="date">[Wedding Date]</p>
+        <img src="assets/photo.jpg" alt="Couple Photo" class="photo">
+        <div id="countdown"></div>
+        <p class="location">[Wedding Location]</p>
+    </div>
+
+
+ <div class="container">
+        <h1>RSVP</h1>
+        <p class="names">We can't wait to celebrate with you!</p>
+
+        <a href="[Your RSVP Form Link]" class="rsvp-button" target="_blank">RSVP Now</a>
+
+        <p class="location">Please reply by [RSVP Deadline Date]</p>
+    </div>
+
+<div class="container">
+  <h1 class="fade-in">Our Memories</h1>
+  <div class="gallery fade-in">
+    <a href="assets/photo1.jpg" data-lightbox="wedding-gallery" data-title="Bride and Groom Under a Veil">
+      <img src="assets/photo1.jpg" alt="Bride and Groom Under a Veil">
+    </a>
+    <a href="assets/photo2.jpg" data-lightbox="wedding-gallery" data-title="Couple Embracing in a Field">
+      <img src="assets/photo2.jpg" alt="Couple Embracing in a Field">
+    </a>
+    <a href="assets/photo3.jpg" data-lightbox="wedding-gallery" data-title="Bride Holding a Bouquet">
+      <img src="assets/photo3.jpg" alt="Bride Holding a Bouquet">
+    </a>
+    <a href="assets/photo4.jpg" data-lightbox="wedding-gallery" data-title="Memory 4">
+      <img src="assets/photo4.jpg" alt="Memory 4">
+    </a>
+  </div>
+</div>
+
+
+    <script>
+    var countDownDate = new Date("Sep 20, 2025 00:00:00").getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Today is the day!";
+        }
+    }, 1000);
+    </script>
+
+<script>
+  window.addEventListener('load', function() {
+   const backgrounds = [
+  'assets/floral-background-1.jpg',
+  'assets/floral-background-2.jpg',
+  'assets/floral-background-3.jpg',
+  'assets/extra-floral-background-1.jpg',
+  'assets/extra-floral-background-2.jpg',
+  'assets/extra-floral-background-3.jpg',
+  'assets/extra-floral-background-4.jpg',
+  'assets/extra-floral-background-5.jpg'
+];
+    let current = 0;
+    const backgroundDiv = document.getElementById('background');
+
+    function changeBackground() {
+      backgroundDiv.style.opacity = 0;
+      setTimeout(() => {
+        backgroundDiv.style.backgroundImage = `url('${backgrounds[current]}')`;
+        backgroundDiv.style.opacity = 1;
+        current = (current + 1) % backgrounds.length;
+      }, 2000); // wait for fade out before changing
+    }
+
+    // First background
+    changeBackground();
+
+    // Change every 10 seconds
+    setInterval(changeBackground, 10000);
+
+    // Loader fade out
+    const loader = document.getElementById('loader');
+    loader.style.opacity = '0';
+    setTimeout(function() {
+      loader.style.display = 'none';
+    }, 500);
+  });
+</script>
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+</body>
+</html>
