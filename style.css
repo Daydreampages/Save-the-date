@@ -129,3 +129,12 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (optional) soft shadow */
   margin: 10px; /* space between pictures */
 }
+
+.photo {
+  width: 100%;
+  max-width: 400px; /* or 300px if you want smaller */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
