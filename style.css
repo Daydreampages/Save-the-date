@@ -126,3 +126,13 @@ p {
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+.gallery img {
+  width: 100%;
+  max-width: 300px; /* sets a nice width for each photo */
+  height: 200px; /* forces all images to have the same height */
+  object-fit: cover; /* keeps them pretty without stretching */
+  border-radius: 10px; /* (optional) soft rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (optional) soft shadow */
+  margin: 10px; /* space between pictures */
+}
