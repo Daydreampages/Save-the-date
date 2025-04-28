@@ -136,3 +136,18 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (optional) soft shadow */
   margin: 10px; /* space between pictures */
 }
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* gently zooms in */
+}
