@@ -139,3 +139,19 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
 }
+.site-footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #A56B55;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); /* soft overlay */
+  border-top: 1px solid #EFD8C5;
+  width: 100%;
+}
+
+.site-footer p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
